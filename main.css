@@ -1,0 +1,82 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+
+  /* outline: 1px solid tomato; */
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 360px;
+  padding-inline: 30px;
+  padding-block: 20px;
+  margin: 30px;
+
+  border: 2px solid lightgreen;
+  border-radius: 5px;
+}
+
+.calc__digits {
+  display: flex;
+  gap: 10px;
+}
+
+.calc__digit-field {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 10px;
+  height: 40px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+
+  border: 2px solid lightblue;
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.calc__digits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc__digits-main,
+.calc__digits-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.calc__digits-service {
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc__digit {
+  display: inline-block;
+  flex-grow: 1;
+  flex-basis: calc(100% / 4);
+
+  background-color: #eeeeee;
+  border: 2px solid lightcoral;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.calc__digit--wider {
+  flex-grow: 2.5;
+  flex-basis: calc(100% / 2);
+}
+
+.calc__digit:active {
+  background-color: #cccccc;
+}
